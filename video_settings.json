@@ -1,0 +1,6 @@
+{
+    "frame_duration": 3.0,
+    "transition_duration": 1.0,
+    "transition_type": "fade",
+    "aspect_ratio": "square"
+}

@@ -1,0 +1,153 @@
+2025-05-06 13:22:16,233 - __main__ - INFO - Бот запущен
+2025-05-06 13:22:16,234 - aiogram.dispatcher - INFO - Start polling
+2025-05-06 13:22:16,270 - aiogram.dispatcher - INFO - Run polling for bot @ffmpeganimation_bot id=8102716550 - 'ffmpeganimation'
+2025-05-06 13:22:45,269 - aiogram.event - INFO - Update id=17248927 is handled. Duration 232 ms by bot id=8102716550
+2025-05-06 13:22:53,342 - aiogram.event - INFO - Update id=17248928 is handled. Duration 59 ms by bot id=8102716550
+2025-05-06 13:23:36,747 - handlers.upload - INFO - Photo saved to /opt/animation/images/AgACAgIAAxkBAAPRaBoNWKAjkZ49V9_4Db5bNV9-CgoAAsrrMRvlwtFIg3SvQQABOoEHAQADAgADeQADNgQ.jpg
+2025-05-06 13:23:36,747 - aiogram.event - INFO - Update id=17248929 is handled. Duration 526 ms by bot id=8102716550
+2025-05-06 13:23:36,769 - handlers.upload - INFO - Photo saved to /opt/animation/images/AgACAgIAAxkBAAPSaBoNWK7b9nKcIOhatb-bvIykHPIAAsbqMRtUfdBIbUUeX75pEIgBAAMCAAN5AAM2BA.jpg
+2025-05-06 13:23:36,769 - aiogram.event - INFO - Update id=17248930 is handled. Duration 547 ms by bot id=8102716550
+2025-05-06 13:23:49,004 - aiogram.event - INFO - Update id=17248931 is not handled. Duration 61 ms by bot id=8102716550
+2025-05-06 13:23:49,004 - aiogram.event - ERROR - Cause exception while process update id=17248931 by bot id=8102716550
+NameError: name 'options' is not defined
+Traceback (most recent call last):
+  File "/opt/ffmpeg_bot/venv/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/ffmpeg_bot/venv/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/ffmpeg_bot/venv/lib/python3.12/site-packages/aiogram/dispatcher/middlewares/error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/ffmpeg_bot/venv/lib/python3.12/site-packages/aiogram/dispatcher/middlewares/user_context.py", line 27, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/ffmpeg_bot/venv/lib/python3.12/site-packages/aiogram/fsm/middleware.py", line 41, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/ffmpeg_bot/venv/lib/python3.12/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/ffmpeg_bot/venv/lib/python3.12/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/opt/ffmpeg_bot/venv/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/ffmpeg_bot/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 128, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/ffmpeg_bot/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 123, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/ffmpeg_bot/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 156, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/ffmpeg_bot/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 128, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/ffmpeg_bot/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 123, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/ffmpeg_bot/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 148, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/ffmpeg_bot/venv/lib/python3.12/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/ffmpeg_bot/venv/lib/python3.12/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/opt/ffmpeg_bot/handlers/menu.py", line 172, in cmd_current_settings
+    settings["aspect_ratio"] = options[choice]
+                               ^^^^^^^
+NameError: name 'options' is not defined
+2025-05-06 13:23:57,640 - handlers.video_commands - ERROR - Ошибка создания видео: create_video_with_ffmpeg() got an unexpected keyword argument 'aspect_ratio'
+Traceback (most recent call last):
+  File "/opt/ffmpeg_bot/handlers/video_commands.py", line 68, in cmd_make_video
+    await create_video_with_ffmpeg(
+          ^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: create_video_with_ffmpeg() got an unexpected keyword argument 'aspect_ratio'
+2025-05-06 13:23:57,750 - aiogram.event - INFO - Update id=17248932 is handled. Duration 176 ms by bot id=8102716550
+2025-05-06 13:24:51,154 - aiogram.dispatcher - WARNING - Received SIGTERM signal
+2025-05-06 13:24:51,156 - aiogram.dispatcher - INFO - Polling stopped for bot @ffmpeganimation_bot id=8102716550 - 'ffmpeganimation'
+2025-05-06 13:24:51,156 - aiogram.dispatcher - INFO - Polling stopped
+2025-05-06 13:24:55,263 - __main__ - INFO - Бот запущен
+2025-05-06 13:24:55,264 - aiogram.dispatcher - INFO - Start polling
+2025-05-06 13:24:55,302 - aiogram.dispatcher - INFO - Run polling for bot @ffmpeganimation_bot id=8102716550 - 'ffmpeganimation'
+2025-05-06 13:26:59,573 - aiogram.dispatcher - WARNING - Received SIGTERM signal
+2025-05-06 13:26:59,574 - aiogram.dispatcher - INFO - Polling stopped for bot @ffmpeganimation_bot id=8102716550 - 'ffmpeganimation'
+2025-05-06 13:26:59,574 - aiogram.dispatcher - INFO - Polling stopped
+2025-05-06 13:27:03,177 - __main__ - INFO - Бот запущен
+2025-05-06 13:27:03,178 - aiogram.dispatcher - INFO - Start polling
+2025-05-06 13:27:03,215 - aiogram.dispatcher - INFO - Run polling for bot @ffmpeganimation_bot id=8102716550 - 'ffmpeganimation'
+2025-05-06 13:29:18,467 - aiogram.dispatcher - WARNING - Received SIGTERM signal
+2025-05-06 13:29:18,469 - aiogram.dispatcher - INFO - Polling stopped for bot @ffmpeganimation_bot id=8102716550 - 'ffmpeganimation'
+2025-05-06 13:29:18,469 - aiogram.dispatcher - INFO - Polling stopped
+2025-05-06 13:29:22,309 - __main__ - INFO - Бот запущен
+2025-05-06 13:29:22,310 - aiogram.dispatcher - INFO - Start polling
+2025-05-06 13:29:22,346 - aiogram.dispatcher - INFO - Run polling for bot @ffmpeganimation_bot id=8102716550 - 'ffmpeganimation'
+2025-05-06 13:30:34,634 - aiogram.event - INFO - Update id=17248933 is handled. Duration 204 ms by bot id=8102716550
+2025-05-06 13:30:40,774 - aiogram.event - INFO - Update id=17248934 is handled. Duration 1 ms by bot id=8102716550
+2025-05-06 13:32:22,999 - aiogram.event - INFO - Update id=17248935 is handled. Duration 143 ms by bot id=8102716550
+2025-05-06 13:32:31,301 - aiogram.event - INFO - Update id=17248936 is handled. Duration 1 ms by bot id=8102716550
+2025-05-06 13:32:36,042 - aiogram.event - INFO - Update id=17248937 is handled. Duration 103 ms by bot id=8102716550
+2025-05-06 13:32:46,248 - aiogram.event - INFO - Update id=17248938 is handled. Duration 1 ms by bot id=8102716550
+2025-05-06 13:32:50,581 - aiogram.event - INFO - Update id=17248939 is handled. Duration 55 ms by bot id=8102716550
+2025-05-06 13:32:57,165 - aiogram.event - INFO - Update id=17248940 is handled. Duration 99 ms by bot id=8102716550
+2025-05-06 13:33:02,274 - handlers.video_commands - ERROR - Ошибка создания видео: create_video_with_ffmpeg() got an unexpected keyword argument 'aspect_ratio'
+Traceback (most recent call last):
+  File "/opt/ffmpeg_bot/handlers/video_commands.py", line 68, in cmd_make_video
+    await create_video_with_ffmpeg(
+          ^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: create_video_with_ffmpeg() got an unexpected keyword argument 'aspect_ratio'
+2025-05-06 13:33:02,501 - aiogram.event - INFO - Update id=17248941 is handled. Duration 365 ms by bot id=8102716550
+2025-05-06 13:38:17,905 - aiogram.dispatcher - WARNING - Received SIGTERM signal
+2025-05-06 13:38:17,907 - aiogram.dispatcher - INFO - Polling stopped for bot @ffmpeganimation_bot id=8102716550 - 'ffmpeganimation'
+2025-05-06 13:38:17,907 - aiogram.dispatcher - INFO - Polling stopped
+2025-05-06 13:38:21,494 - __main__ - INFO - Бот запущен
+2025-05-06 13:38:21,495 - aiogram.dispatcher - INFO - Start polling
+2025-05-06 13:38:21,530 - aiogram.dispatcher - INFO - Run polling for bot @ffmpeganimation_bot id=8102716550 - 'ffmpeganimation'
+2025-05-06 13:39:54,859 - aiogram.dispatcher - WARNING - Received SIGTERM signal
+2025-05-06 13:39:54,860 - aiogram.dispatcher - INFO - Polling stopped for bot @ffmpeganimation_bot id=8102716550 - 'ffmpeganimation'
+2025-05-06 13:39:54,860 - aiogram.dispatcher - INFO - Polling stopped
+2025-05-06 13:39:58,479 - __main__ - INFO - Бот запущен
+2025-05-06 13:39:58,480 - aiogram.dispatcher - INFO - Start polling
+2025-05-06 13:39:58,515 - aiogram.dispatcher - INFO - Run polling for bot @ffmpeganimation_bot id=8102716550 - 'ffmpeganimation'
+2025-05-06 13:40:55,339 - handlers.video_commands - ERROR - Ошибка создания видео: create_video_with_ffmpeg() got an unexpected keyword argument 'aspect_ratio'
+Traceback (most recent call last):
+  File "/opt/ffmpeg_bot/handlers/video_commands.py", line 68, in cmd_make_video
+    await create_video_with_ffmpeg(
+          ^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: create_video_with_ffmpeg() got an unexpected keyword argument 'aspect_ratio'
+2025-05-06 13:40:55,638 - aiogram.event - INFO - Update id=17248942 is handled. Duration 521 ms by bot id=8102716550
+2025-05-06 17:10:10,845 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+2025-05-06 17:10:10,846 - aiogram.dispatcher - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8102716550)
+2025-05-06 17:10:21,957 - aiogram.dispatcher - INFO - Connection established (tryings = 1, bot id = 8102716550)
+2025-05-06 20:21:20,595 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+2025-05-06 20:21:20,596 - aiogram.dispatcher - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8102716550)
+2025-05-06 20:21:31,707 - aiogram.dispatcher - INFO - Connection established (tryings = 1, bot id = 8102716550)
+2025-05-08 21:21:39,528 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+2025-05-08 21:21:39,529 - aiogram.dispatcher - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8102716550)
+2025-05-08 21:21:50,633 - aiogram.dispatcher - INFO - Connection established (tryings = 1, bot id = 8102716550)
+2025-05-13 21:49:48,821 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramRetryAfter: Telegram server says - Flood control exceeded on method 'GetUpdates'. Retry in 5 seconds.
+Original description: Too Many Requests: retry after 5
+(background on this error at: https://core.telegram.org/bots/faq#my-bot-is-hitting-limits-how-do-i-avoid-this)
+2025-05-13 21:49:48,826 - aiogram.dispatcher - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8102716550)
+2025-05-13 21:49:49,860 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramRetryAfter: Telegram server says - Flood control exceeded on method 'GetUpdates'. Retry in 5 seconds.
+Original description: Too Many Requests: retry after 5
+(background on this error at: https://core.telegram.org/bots/faq#my-bot-is-hitting-limits-how-do-i-avoid-this)
+2025-05-13 21:49:49,861 - aiogram.dispatcher - WARNING - Sleep for 1.234013 seconds and try again... (tryings = 1, bot id = 8102716550)
+2025-05-13 21:49:52,583 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramServerError: Telegram server says - Bad Gateway
+2025-05-13 21:49:52,583 - aiogram.dispatcher - WARNING - Sleep for 1.675544 seconds and try again... (tryings = 2, bot id = 8102716550)
+2025-05-13 21:50:23,431 - aiogram.dispatcher - INFO - Connection established (tryings = 3, bot id = 8102716550)
+2025-05-16 09:21:11,753 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+2025-05-16 09:21:11,754 - aiogram.dispatcher - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8102716550)
+2025-05-16 09:21:22,863 - aiogram.dispatcher - INFO - Connection established (tryings = 1, bot id = 8102716550)
+2025-05-16 09:21:22,865 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+2025-05-16 09:21:22,865 - aiogram.dispatcher - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8102716550)
+2025-05-16 09:21:33,964 - aiogram.dispatcher - INFO - Connection established (tryings = 1, bot id = 8102716550)
+2025-05-16 09:57:31,444 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+2025-05-16 09:57:31,445 - aiogram.dispatcher - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8102716550)
+2025-05-16 09:57:42,546 - aiogram.dispatcher - INFO - Connection established (tryings = 1, bot id = 8102716550)

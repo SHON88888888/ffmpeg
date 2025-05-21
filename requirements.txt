@@ -1,0 +1,6 @@
+aiogram==3.4.1
+python-dotenv==1.0.1
+pillow==10.3.0
+imageio-ffmpeg==0.4.9
+pydub==0.25.1
+numpy==2.2.5  
